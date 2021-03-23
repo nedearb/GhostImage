@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  GhostImage
 //
-//  Created by Braeden Atlee on 7/6/17.
-//  Copyright © 2017 Braeden Atlee. All rights reserved.
+//  Created by Emily Atlee on 7/6/17.s
+//  Copyright © 2021 Emily Atlee. All rights reserved.
 //
 
 import Cocoa
@@ -38,9 +38,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let dialog = NSOpenPanel();
         
         dialog.title = "Choose an image...";
-        dialog.allowedFileTypes = NSImage.imageTypes();
+        dialog.allowedFileTypes = NSImage.imageTypes;
         
-        if(dialog.runModal() == NSModalResponseOK){
+        if(dialog.runModal() == NSApplication.ModalResponse.OK){
             let result = dialog.url;
             if(result != nil){
                 let path = result!.path;
@@ -54,12 +54,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func onMenuAspectRatio(_ sender: NSMenuItem) {
-        if(sender.state == NSOnState){
+        if(sender.state == NSControl.StateValue.on){
             mainImageView.imageScaling = NSImageScaling.scaleAxesIndependently;
-            sender.state = NSOffState;
+            sender.state = NSControl.StateValue.off;
         }else{
             mainImageView.imageScaling = NSImageScaling.scaleProportionallyUpOrDown;
-            sender.state = NSOnState;
+            sender.state = NSControl.StateValue.on;
         }
     }
     
