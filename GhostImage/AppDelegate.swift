@@ -23,6 +23,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         window.alphaValue = 1.0;
         updateOpacityItemsEnabled();
+        
+        mainImageView.imageAlignment = NSImageAlignment.alignCenter;
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
