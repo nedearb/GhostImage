@@ -25,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         updateOpacityItemsEnabled();
         
         mainImageView.imageAlignment = NSImageAlignment.alignCenter;
+        setMaintainAspectRatio(true);
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -55,19 +56,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
-    @IBAction func onMenuAspectRatio(_ sender: NSMenuItem) {
-        if(sender.state == NSControl.StateValue.on){
+    func setMaintainAspectRatio(_ maintain: Bool) {
+        if(maintain){
             mainImageView.imageScaling = NSImageScaling.scaleAxesIndependently;
-            sender.state = NSControl.StateValue.off;
         }else{
             mainImageView.imageScaling = NSImageScaling.scaleProportionallyUpOrDown;
-            sender.state = NSControl.StateValue.on;
         }
     }
     
     func updateOpacityItemsEnabled(){
         menuItemIncOpacity.isEnabled = window.alphaValue < 1.0;
         menuItemDecOpacity.isEnabled = window.alphaValue > 0.1;
+    }
+    
+    @IBAction func onMenuAspectRatio(_ sender: NSMenuItem) {
+        let turnOn = sender.state == NSControl.StateValue.off;
+        sender.state = turnOn ? NSControl.StateValue.on : NSControl.StateValue.off;
+        
+        setMaintainAspectRatio(turnOn);
     }
     
     @IBAction func onMenuIncOpacity(_ sender: NSMenuItem) {

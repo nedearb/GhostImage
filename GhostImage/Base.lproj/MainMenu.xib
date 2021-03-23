@@ -19,7 +19,6 @@
                 <outlet property="mainImageView" destination="Y6S-Jg-TgJ" id="9NL-t9-Hds"/>
                 <outlet property="menuItemDecOpacity" destination="hw8-My-P1T" id="lHc-VC-SCh"/>
                 <outlet property="menuItemIncOpacity" destination="dFu-2K-CFe" id="MXk-ig-Pt1"/>
-                <outlet property="onMenuFullOpacity" destination="hlb-mf-KGC" id="hR7-an-ol5"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -105,7 +104,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="View" autoenablesItems="NO" id="ikT-eS-F0a">
                         <items>
-                            <menuItem title="Maintain Aspect Ratio" id="fyD-3v-fgC">
+                            <menuItem title="Maintain Aspect Ratio" state="on" id="fyD-3v-fgC">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="onMenuAspectRatio:" target="Voe-Tx-rLC" id="zxh-f0-8M1"/>
