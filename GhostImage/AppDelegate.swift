@@ -58,9 +58,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func setMaintainAspectRatio(_ maintain: Bool) {
         if(maintain){
-            mainImageView.imageScaling = NSImageScaling.scaleAxesIndependently;
-        }else{
             mainImageView.imageScaling = NSImageScaling.scaleProportionallyUpOrDown;
+        }else{
+            mainImageView.imageScaling = NSImageScaling.scaleAxesIndependently;
         }
     }
     
