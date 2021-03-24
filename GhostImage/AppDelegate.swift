@@ -34,6 +34,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         mainImageView.imageAlignment = NSImageAlignment.alignCenter;
         updateImageScaling();
+        
+        mainImageView.image = NSImage(named: "AppIcon");
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
