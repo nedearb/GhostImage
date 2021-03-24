@@ -17,8 +17,11 @@
             <connections>
                 <outlet property="MainImageView" destination="Y6S-Jg-TgJ" id="qMo-fI-uIE"/>
                 <outlet property="mainImageView" destination="Y6S-Jg-TgJ" id="9NL-t9-Hds"/>
+                <outlet property="menuItemActualSize" destination="Umz-2M-Cut" id="fLL-am-Zrn"/>
                 <outlet property="menuItemDecOpacity" destination="hw8-My-P1T" id="lHc-VC-SCh"/>
+                <outlet property="menuItemFullOpacity" destination="hlb-mf-KGC" id="YgT-oq-O9S"/>
                 <outlet property="menuItemIncOpacity" destination="dFu-2K-CFe" id="MXk-ig-Pt1"/>
+                <outlet property="menuItemMaintainAspectRatio" destination="fyD-3v-fgC" id="nTm-gg-YZy"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -104,6 +107,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="View" autoenablesItems="NO" id="ikT-eS-F0a">
                         <items>
+                            <menuItem title="Actual Size" keyEquivalent="a" id="Umz-2M-Cut">
+                                <connections>
+                                    <action selector="onMenuActualSize:" target="Voe-Tx-rLC" id="ruu-Ry-tiz"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Maintain Aspect Ratio" state="on" keyEquivalent="r" id="fyD-3v-fgC">
                                 <connections>
                                     <action selector="onMenuAspectRatio:" target="Voe-Tx-rLC" id="zxh-f0-8M1"/>
@@ -167,7 +175,7 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="132" y="120"/>
+            <point key="canvasLocation" x="106" y="106"/>
         </menu>
         <window title="GhostImage" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -186,6 +194,7 @@
                     </imageView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="166" y="-157"/>
         </window>
     </objects>
 </document>
