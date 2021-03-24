@@ -123,5 +123,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         opacityPercent = 100;
         updateOpacityItemsEnabled();
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true;
+    }
 }
 
